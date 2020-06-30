@@ -10,14 +10,8 @@ Express and Node.js application that can be used to write, save, and delete note
 
 
 # Installation
-## Deployed on Heroku 
-
-## Instructions:
-* Download Node.js
-* Clone this repo
-* Run npm install
-* Run node app.js
-* Respond to prompts in the command line
+## Deployed on Heroku
+Link: https://afternoon-crag-91916.herokuapp.com/ 
 
 # Sources
 
