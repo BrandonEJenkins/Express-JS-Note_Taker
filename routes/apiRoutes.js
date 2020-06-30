@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { to } = require('await-to-js');
-const store = require('../db/store');
+const Store = require('../db/store');
+const store = new Store();
 
 // api/notes
-router.get("'/notes", async (req, res) => {
+router.get("/notes", async (req, res) => {
     const [err, notes] = await to (store.getNotes());
 
     if (err) return res.status(500).json(err);
@@ -12,7 +13,7 @@ router.get("'/notes", async (req, res) => {
 
 router.post("/notes", function (req, res) {
     store.addNote(req.body)
-    .thn(note => res.json(note))
+    .then(note => res.json(note))
 });
 
 router.delete("/notes/:id", function (req, res) {

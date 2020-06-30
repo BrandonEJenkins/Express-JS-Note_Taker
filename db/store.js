@@ -28,12 +28,19 @@ class Store {
         return parsedNotes;
     }
 
-    async addNote() {
-        const { title, text } = await this.getNotes()
-            .then(notes => [...notes, addNote])
-            .then(updateNotes => this.write(updateNotes))
-            .then(() => addNote);
-        }
+    async addNote(note) {
+        const notes = await this.getNotes();
+        const updateNotes = [...notes, note];
+        await this.write(updateNotes);
+        return updateNotes;
+    }
+
+    // async addNote(note) {
+    //     this.getNotes()
+    //         .then(notes => [...notes, note])
+    //         .then(updateNotes => this.write(updateNotes))
+    //         .then(() => updateNotes);
+    //     }
 
 
         async removeNote() {
