@@ -1,5 +1,23 @@
 # Express-JS-Note_Taker
-Express and Node.js application that can be used to write, save, and delete notes
+Express and Node.js application that can be used to write, save, and delete notes.
+
+## Technologies Employed:
+* HTML, CSS
+* JavaScript
+* Node.js
+* Express.js 
+* Heroku
+
+
+# Installation
+## Deployed on Heroku 
+
+## Instructions:
+* Download Node.js
+* Clone this repo
+* Run npm install
+* Run node app.js
+* Respond to prompts in the command line
 
 # Sources
 
